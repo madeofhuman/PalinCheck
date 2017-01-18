@@ -23,9 +23,6 @@ end
 # If the string itself is a palindrome, then it will be the result.
 # If not, the longest substring that is a palindrome will be returned.
 def self.longest_palindrome(string)
-  # check for empty strings
-  return string if string == ""
-  return null if string.empty?
   # terminating index of the string
   n = string.length-1
   # iterate over string and return longest palindrome substring
@@ -42,6 +39,10 @@ def self.prompt
   puts "Enter string to check for longest palindrome."
   # get the input
   input_string = gets.chomp
+
+  # check for empty input
+  puts "Your string must not be empty" if input_string.empty?
+  return
 
   # check if the input string is a palindrome and return it if it is
   is_palindrome = self.palindrome?(input_string)
