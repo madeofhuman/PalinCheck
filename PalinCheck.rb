@@ -1,6 +1,6 @@
 class PalinCheck
 
-# test a given string for palindromicity. Returns true or false
+# test a given string for palindromicity. Should return true
 def self.palindrome?(string)
   # the starting index of the string
   m = 0
